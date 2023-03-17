@@ -15,7 +15,7 @@ module.exports = {
         arrowRightUp: "url('/images/arrow-right-up.svg')",
         chevronDown: "url(/images/chevron--down.svg)",
         circle: "url('/images/circle.svg')",
-      },
+      }, 
       backgroundPosition: {
         'right-center': '97% center'
       },
