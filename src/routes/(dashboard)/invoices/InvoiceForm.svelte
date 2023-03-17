@@ -1,6 +1,16 @@
 <script lang="ts">
     import Button from '$lib/components/Button.svelte';
 	import Trash from '$lib/components/Icon/Trash.svelte';
+	import LineItemRows from './LineItemRows.svelte';
+
+    const blankLineItem = [
+        {
+            id: '1',
+            description: '',
+            quantity: 0,
+            amount: 0,
+        }
+    ];
 </script>
 
 
@@ -48,7 +58,9 @@
     </div>
 
     <!-- line items -->
-    <div class="field col-span-6">Line Items</div>
+    <div class="field col-span-6">
+        <LineItemRows lineItems={blankLineItem} />
+    </div>
 
     <!-- notes -->
     <div class="field col-span-6">
@@ -67,7 +79,7 @@
 
     <!-- buttons -->
     <div class="field col-span-2">
-        <Button label="Delete" style="textOnly" isAnimated={false} onClick={() => {}} iconLeft={Trash} />
+        <Button label="Delete" style="textOnlyDestructive" isAnimated={false} onClick={() => {}} iconLeft={Trash} />
     </div>
 
     <div class="field col-span-4 flex justify-end gap-x-5">
